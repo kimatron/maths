@@ -58,31 +58,46 @@ function calculateCorrectAnswer() {
   }
 
 }
+/**
+ * Checks the answer agaist the first element in
+ * the returned calculateCorrectAnswer array
+ */
+function checkAnswer() {
 
-function calculateCorrectAnswer() {
+  let userAnswer = parseInt(document.getElementById("answer-box").value);
+  let calculatedAnswer = calculateCorrectAnswer();
+  let isCorrect = userAnswer === calculatedAnswer[0];
 
-}
+  if (isCorrect) {
+    alert("Hey! You got it right! :D");
+  } else {
+    alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+  }
 
-function incrementScore() {
+  function calculateCorrectAnswer() {
 
-}
+  }
 
-function incrementWrongAnswer() {
+  function incrementScore() {
 
-}
+  }
 
-function displayAdditionQuestion(operand1, operand2) {
+  function incrementWrongAnswer() {
 
-  document.getElementById('operand1').textContent = operand1;
-  document.getElementById('operand2').textContent = operand2;
-  document.getElementById('operator').textContent = "+";
+  }
 
-}
+  function displayAdditionQuestion(operand1, operand2) {
 
-function displaySubtractQuestion() {
+    document.getElementById('operand1').textContent = operand1;
+    document.getElementById('operand2').textContent = operand2;
+    document.getElementById('operator').textContent = "+";
 
-}
+  }
 
-function displayMultiplyQuestion() {
+  function displaySubtractQuestion() {
 
-}
+  }
+
+  function displayMultiplyQuestion() {
+
+  }
